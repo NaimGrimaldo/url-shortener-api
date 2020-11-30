@@ -1,7 +1,7 @@
 class Visitor < ApplicationRecord
   belongs_to :link, inverse_of: :visitors
   has_many :visitor_agents, inverse_of: :visitor
-  enum type: %i[unique recurrent]
+  enum visitor_kind: %i[unique recurrent]
 
   before_validation :became_recurrent?
 

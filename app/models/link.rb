@@ -10,6 +10,7 @@ class Link < ApplicationRecord
   has_many :visitors, inverse_of: :link
 
   validates :original_url, :unique_key, presence: true
+  validates :original_url, uniqueness: true
   validate :url_valid?
   before_validation :generate_unique_key, unless: :unique_key?
 

@@ -4,6 +4,11 @@ class LinksController < ApplicationController
   include BasicCrudMethods
   skip_before_action :authenticate_request!, only: :visit
 
+  def index
+    @collection = scope
+    render json: { links: @collection }, status: :ok, url_options: url_options
+  end
+
   def show
     set_object
     render json: @object, with_visitors: true, url_options: url_options

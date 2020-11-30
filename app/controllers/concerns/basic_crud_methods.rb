@@ -34,7 +34,7 @@ module BasicCrudMethods
 
   def destroy
     if set_object.destroy
-      head :no_content
+      head :ok
     else
       head :unprocessable_entity
     end
