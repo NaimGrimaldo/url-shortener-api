@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
   include BasicCrudMethods
-
+  skip_before_action :authenticate_request!, only: :create
   private
 
   def model
