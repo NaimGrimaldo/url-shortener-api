@@ -27,7 +27,7 @@ end
 def anagram?(str1, str2)
   return unless str1.is_a?(String) && str2.is_a?(String)
 
-  return unless str1.size == str2.size
+  return unless str1.size.eql?(str2.size)
 
   str1.chars.difference(str2.chars).empty?
 end
