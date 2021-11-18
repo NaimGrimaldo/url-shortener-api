@@ -24,12 +24,12 @@ def sort_string(str)
 end
 
 # 2
-def anagram?(w1, w2)
+def anagram?(str1, str2)
   return unless str1.is_a?(String) && str2.is_a?(String)
 
-  return unless w1.size == w2.size
+  return unless str1.size == str2.size
 
-  w1.chars.difference(w2.chars).empty?
+  str1.chars.difference(str2.chars).empty?
 end
 
 ```
