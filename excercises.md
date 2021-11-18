@@ -10,6 +10,7 @@ end
 
 # 2. Compare if two strings are anagrams (assume input consists of ASCII alphabets only)
 ```ruby
+# first way
 def str_anagram?(str1, str2)
   return unless str1.is_a?(String) && str2.is_a?(String)
   
@@ -21,6 +22,16 @@ end
 def sort_string(str)
   str.chars.sort(&:casecmp).join('').downcase
 end
+
+# 2
+def anagram?(w1, w2)
+  return unless str1.is_a?(String) && str2.is_a?(String)
+
+  return unless w1.size == w2.size
+
+  w1.chars.difference(w2.chars).empty?
+end
+
 ```
 # 3. Compare if two strings are same irrespective of case
 ```ruby
